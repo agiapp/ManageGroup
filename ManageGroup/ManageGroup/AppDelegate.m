@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "BRContactsViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,20 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    BRContactsViewController *contactsVC = [[BRContactsViewController alloc]init];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:contactsVC];
+    // 设置状态栏前景色为白色
+    nav.navigationBar.barStyle = UIBarStyleBlack;
+    // 设置navigationBar背景颜色
+    nav.navigationBar.barTintColor = RGB_HEX(0x349DDA);
+    // 设置navigationBar所有子控件的颜色
+    nav.navigationBar.tintColor = [UIColor whiteColor];
+    // 设置 title 颜色
+    [nav.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
