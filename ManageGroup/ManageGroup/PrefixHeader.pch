@@ -1,0 +1,31 @@
+//
+//  PrefixHeader.pch
+//  ManageGroup
+//
+//  Created by 任波 on 17/2/23.
+//  Copyright © 2017年 renbo. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define kStatusBarAndNaviBarH 64
+
+//屏幕大小
+#define SCREEN_BOUNDS [[UIScreen mainScreen]bounds]
+#define SCREEN_WIDTH [[UIScreen mainScreen]bounds].size.width
+#define SCREEN_HEIGHT [[UIScreen mainScreen]bounds].size.height
+
+//返回数据成功
+#define successFlag @"0"
+
+// RGB颜色(10进制)
+#define RGB(r, g, b, a) [UIColor colorWithRed:(r) / 255.0 green:(g) / 255.0 blue:(b) / 255.0 alpha:(a)]
+
+// RGB颜色(16进制)
+#define RGB_HEX(rgbValue) \
+[UIColor colorWithRed:((CGFloat)((rgbValue & 0xFF0000) >> 16)) / 255.0 \
+green:((CGFloat)((rgbValue & 0xFF00) >> 8)) / 255.0 \
+blue:((CGFloat)(rgbValue & 0xFF)) / 255.0 alpha:1.0]
+
+#endif /* PrefixHeader_pch */
