@@ -3,10 +3,11 @@
 
 # 效果图
 
+|                   效果图1                   |                   效果图2                   |
+| :--------------------------------------: | :--------------------------------------: |
+| ![运行效果1](https://github.com/borenfocus/ManageGroup/blob/master/ManageGroup/ManageGroup/Resource/%E6%95%88%E6%9E%9C%E5%9B%BE1.gif) | ![运行效果2](https://github.com/borenfocus/ManageGroup/blob/master/ManageGroup/ManageGroup/Resource/%E6%95%88%E6%9E%9C%E5%9B%BE2.gif) |
 
 
-![运行效果1](https://github.com/borenfocus/ManageGroup/blob/master/ManageGroup/ManageGroup/Resource/%E6%95%88%E6%9E%9C%E5%9B%BE1.gif)
 
 
 
-![运行效果2](https://github.com/borenfocus/ManageGroup/blob/master/ManageGroup/ManageGroup/Resource/%E6%95%88%E6%9E%9C%E5%9B%BE2.gif)
