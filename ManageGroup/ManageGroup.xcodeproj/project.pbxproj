@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C543FF2F1E5EAB1F00BC3D09 /* BRContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C543FF251E5EAB1F00BC3D09 /* BRContactsViewController.m */; };
+		C543FF301E5EAB1F00BC3D09 /* BRGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C543FF271E5EAB1F00BC3D09 /* BRGroupViewController.m */; };
+		C543FF311E5EAB1F00BC3D09 /* BRContactsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C543FF2A1E5EAB1F00BC3D09 /* BRContactsModel.m */; };
+		C543FF321E5EAB1F00BC3D09 /* contacts.json in Resources */ = {isa = PBXBuildFile; fileRef = C543FF2B1E5EAB1F00BC3D09 /* contacts.json */; };
+		C543FF331E5EAB1F00BC3D09 /* BRContactsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C543FF2E1E5EAB1F00BC3D09 /* BRContactsCell.m */; };
+		C543FF3E1E5EAC0F00BC3D09 /* group_manage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C543FF3C1E5EAC0F00BC3D09 /* group_manage@2x.png */; };
+		C543FF3F1E5EAC0F00BC3D09 /* group_manage@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C543FF3D1E5EAC0F00BC3D09 /* group_manage@3x.png */; };
+		C543FF421E5EAC2700BC3D09 /* add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C543FF401E5EAC2700BC3D09 /* add@2x.png */; };
+		C543FF431E5EAC2700BC3D09 /* add@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C543FF411E5EAC2700BC3D09 /* add@3x.png */; };
+		C543FF461E5EAC5900BC3D09 /* pulldownList@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C543FF441E5EAC5900BC3D09 /* pulldownList@2x.png */; };
+		C543FF471E5EAC5900BC3D09 /* pulldownList@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C543FF451E5EAC5900BC3D09 /* pulldownList@3x.png */; };
+		C543FF4C1E5EBAD700BC3D09 /* BRGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C543FF4B1E5EBAD700BC3D09 /* BRGroupModel.m */; };
+		C543FF4E1E5ECA7700BC3D09 /* default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C543FF4D1E5ECA7700BC3D09 /* default.jpg */; };
+		C543FF531E5EE58900BC3D09 /* BRSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C543FF501E5EE58900BC3D09 /* BRSearchBar.m */; };
+		C543FF541E5EE58900BC3D09 /* BRSearchBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = C543FF521E5EE58900BC3D09 /* BRSearchBarView.m */; };
 		C54A3F3F1E5D9B50008FF367 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3F3E1E5D9B50008FF367 /* main.m */; };
 		C54A3F421E5D9B50008FF367 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3F411E5D9B50008FF367 /* AppDelegate.m */; };
 		C54A3F451E5D9B50008FF367 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3F441E5D9B50008FF367 /* ViewController.m */; };
@@ -16,6 +31,29 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C543FF111E5E769400BC3D09 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		C543FF241E5EAB1F00BC3D09 /* BRContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRContactsViewController.h; sourceTree = "<group>"; };
+		C543FF251E5EAB1F00BC3D09 /* BRContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRContactsViewController.m; sourceTree = "<group>"; };
+		C543FF261E5EAB1F00BC3D09 /* BRGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRGroupViewController.h; sourceTree = "<group>"; };
+		C543FF271E5EAB1F00BC3D09 /* BRGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRGroupViewController.m; sourceTree = "<group>"; };
+		C543FF291E5EAB1F00BC3D09 /* BRContactsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRContactsModel.h; sourceTree = "<group>"; };
+		C543FF2A1E5EAB1F00BC3D09 /* BRContactsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRContactsModel.m; sourceTree = "<group>"; };
+		C543FF2B1E5EAB1F00BC3D09 /* contacts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = contacts.json; sourceTree = "<group>"; };
+		C543FF2D1E5EAB1F00BC3D09 /* BRContactsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRContactsCell.h; sourceTree = "<group>"; };
+		C543FF2E1E5EAB1F00BC3D09 /* BRContactsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRContactsCell.m; sourceTree = "<group>"; };
+		C543FF3C1E5EAC0F00BC3D09 /* group_manage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "group_manage@2x.png"; sourceTree = "<group>"; };
+		C543FF3D1E5EAC0F00BC3D09 /* group_manage@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "group_manage@3x.png"; sourceTree = "<group>"; };
+		C543FF401E5EAC2700BC3D09 /* add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@2x.png"; sourceTree = "<group>"; };
+		C543FF411E5EAC2700BC3D09 /* add@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@3x.png"; sourceTree = "<group>"; };
+		C543FF441E5EAC5900BC3D09 /* pulldownList@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pulldownList@2x.png"; sourceTree = "<group>"; };
+		C543FF451E5EAC5900BC3D09 /* pulldownList@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pulldownList@3x.png"; sourceTree = "<group>"; };
+		C543FF4A1E5EBAD700BC3D09 /* BRGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRGroupModel.h; sourceTree = "<group>"; };
+		C543FF4B1E5EBAD700BC3D09 /* BRGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRGroupModel.m; sourceTree = "<group>"; };
+		C543FF4D1E5ECA7700BC3D09 /* default.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = default.jpg; sourceTree = "<group>"; };
+		C543FF4F1E5EE58900BC3D09 /* BRSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSearchBar.h; sourceTree = "<group>"; };
+		C543FF501E5EE58900BC3D09 /* BRSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRSearchBar.m; sourceTree = "<group>"; };
+		C543FF511E5EE58900BC3D09 /* BRSearchBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSearchBarView.h; sourceTree = "<group>"; };
+		C543FF521E5EE58900BC3D09 /* BRSearchBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRSearchBarView.m; sourceTree = "<group>"; };
 		C54A3F3A1E5D9B50008FF367 /* ManageGroup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManageGroup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C54A3F3E1E5D9B50008FF367 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C54A3F401E5D9B50008FF367 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,6 +77,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C543FF221E5EAB1F00BC3D09 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				C543FF231E5EAB1F00BC3D09 /* Controller */,
+				C543FF2C1E5EAB1F00BC3D09 /* View */,
+				C543FF281E5EAB1F00BC3D09 /* Model */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		C543FF231E5EAB1F00BC3D09 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C543FF241E5EAB1F00BC3D09 /* BRContactsViewController.h */,
+				C543FF251E5EAB1F00BC3D09 /* BRContactsViewController.m */,
+				C543FF261E5EAB1F00BC3D09 /* BRGroupViewController.h */,
+				C543FF271E5EAB1F00BC3D09 /* BRGroupViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C543FF281E5EAB1F00BC3D09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C543FF291E5EAB1F00BC3D09 /* BRContactsModel.h */,
+				C543FF2A1E5EAB1F00BC3D09 /* BRContactsModel.m */,
+				C543FF4A1E5EBAD700BC3D09 /* BRGroupModel.h */,
+				C543FF4B1E5EBAD700BC3D09 /* BRGroupModel.m */,
+				C543FF2B1E5EAB1F00BC3D09 /* contacts.json */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C543FF2C1E5EAB1F00BC3D09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C543FF4F1E5EE58900BC3D09 /* BRSearchBar.h */,
+				C543FF501E5EE58900BC3D09 /* BRSearchBar.m */,
+				C543FF511E5EE58900BC3D09 /* BRSearchBarView.h */,
+				C543FF521E5EE58900BC3D09 /* BRSearchBarView.m */,
+				C543FF2D1E5EAB1F00BC3D09 /* BRContactsCell.h */,
+				C543FF2E1E5EAB1F00BC3D09 /* BRContactsCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C543FF3B1E5EABA400BC3D09 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C543FF3C1E5EAC0F00BC3D09 /* group_manage@2x.png */,
+				C543FF3D1E5EAC0F00BC3D09 /* group_manage@3x.png */,
+				C543FF401E5EAC2700BC3D09 /* add@2x.png */,
+				C543FF411E5EAC2700BC3D09 /* add@3x.png */,
+				C543FF441E5EAC5900BC3D09 /* pulldownList@2x.png */,
+				C543FF451E5EAC5900BC3D09 /* pulldownList@3x.png */,
+				C543FF4D1E5ECA7700BC3D09 /* default.jpg */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		C54A3F311E5D9B50008FF367 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +158,8 @@
 			children = (
 				C54A3F401E5D9B50008FF367 /* AppDelegate.h */,
 				C54A3F411E5D9B50008FF367 /* AppDelegate.m */,
+				C543FF221E5EAB1F00BC3D09 /* Contacts */,
+				C543FF3B1E5EABA400BC3D09 /* Resource */,
 				C54A3F431E5D9B50008FF367 /* ViewController.h */,
 				C54A3F441E5D9B50008FF367 /* ViewController.m */,
 				C54A3F461E5D9B50008FF367 /* Main.storyboard */,
@@ -74,6 +174,7 @@
 		C54A3F3D1E5D9B50008FF367 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C543FF111E5E769400BC3D09 /* PrefixHeader.pch */,
 				C54A3F3E1E5D9B50008FF367 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -137,9 +238,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C543FF321E5EAB1F00BC3D09 /* contacts.json in Resources */,
+				C543FF461E5EAC5900BC3D09 /* pulldownList@2x.png in Resources */,
+				C543FF471E5EAC5900BC3D09 /* pulldownList@3x.png in Resources */,
+				C543FF431E5EAC2700BC3D09 /* add@3x.png in Resources */,
+				C543FF4E1E5ECA7700BC3D09 /* default.jpg in Resources */,
 				C54A3F4D1E5D9B50008FF367 /* LaunchScreen.storyboard in Resources */,
+				C543FF3F1E5EAC0F00BC3D09 /* group_manage@3x.png in Resources */,
 				C54A3F4A1E5D9B50008FF367 /* Assets.xcassets in Resources */,
+				C543FF3E1E5EAC0F00BC3D09 /* group_manage@2x.png in Resources */,
 				C54A3F481E5D9B50008FF367 /* Main.storyboard in Resources */,
+				C543FF421E5EAC2700BC3D09 /* add@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,9 +259,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C543FF301E5EAB1F00BC3D09 /* BRGroupViewController.m in Sources */,
 				C54A3F451E5D9B50008FF367 /* ViewController.m in Sources */,
+				C543FF541E5EE58900BC3D09 /* BRSearchBarView.m in Sources */,
+				C543FF331E5EAB1F00BC3D09 /* BRContactsCell.m in Sources */,
+				C543FF4C1E5EBAD700BC3D09 /* BRGroupModel.m in Sources */,
+				C543FF311E5EAB1F00BC3D09 /* BRContactsModel.m in Sources */,
 				C54A3F421E5D9B50008FF367 /* AppDelegate.m in Sources */,
 				C54A3F3F1E5D9B50008FF367 /* main.m in Sources */,
+				C543FF531E5EE58900BC3D09 /* BRSearchBar.m in Sources */,
+				C543FF2F1E5EAB1F00BC3D09 /* BRContactsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +388,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = ManageGroup/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -284,6 +401,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = ManageGroup/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -311,6 +429,7 @@
 				C54A3F531E5D9B50008FF367 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
