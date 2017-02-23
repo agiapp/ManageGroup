@@ -22,6 +22,8 @@
 		C543FF4E1E5ECA7700BC3D09 /* default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C543FF4D1E5ECA7700BC3D09 /* default.jpg */; };
 		C543FF531E5EE58900BC3D09 /* BRSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C543FF501E5EE58900BC3D09 /* BRSearchBar.m */; };
 		C543FF541E5EE58900BC3D09 /* BRSearchBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = C543FF521E5EE58900BC3D09 /* BRSearchBarView.m */; };
+		C543FF571E5EEB7F00BC3D09 /* 效果图1.gif in Resources */ = {isa = PBXBuildFile; fileRef = C543FF551E5EEB7F00BC3D09 /* 效果图1.gif */; };
+		C543FF581E5EEB7F00BC3D09 /* 效果图2.gif in Resources */ = {isa = PBXBuildFile; fileRef = C543FF561E5EEB7F00BC3D09 /* 效果图2.gif */; };
 		C54A3F3F1E5D9B50008FF367 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3F3E1E5D9B50008FF367 /* main.m */; };
 		C54A3F421E5D9B50008FF367 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3F411E5D9B50008FF367 /* AppDelegate.m */; };
 		C54A3F451E5D9B50008FF367 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3F441E5D9B50008FF367 /* ViewController.m */; };
@@ -54,6 +56,8 @@
 		C543FF501E5EE58900BC3D09 /* BRSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRSearchBar.m; sourceTree = "<group>"; };
 		C543FF511E5EE58900BC3D09 /* BRSearchBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSearchBarView.h; sourceTree = "<group>"; };
 		C543FF521E5EE58900BC3D09 /* BRSearchBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRSearchBarView.m; sourceTree = "<group>"; };
+		C543FF551E5EEB7F00BC3D09 /* 效果图1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "效果图1.gif"; sourceTree = "<group>"; };
+		C543FF561E5EEB7F00BC3D09 /* 效果图2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "效果图2.gif"; sourceTree = "<group>"; };
 		C54A3F3A1E5D9B50008FF367 /* ManageGroup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManageGroup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C54A3F3E1E5D9B50008FF367 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C54A3F401E5D9B50008FF367 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 				C543FF441E5EAC5900BC3D09 /* pulldownList@2x.png */,
 				C543FF451E5EAC5900BC3D09 /* pulldownList@3x.png */,
 				C543FF4D1E5ECA7700BC3D09 /* default.jpg */,
+				C543FF551E5EEB7F00BC3D09 /* 效果图1.gif */,
+				C543FF561E5EEB7F00BC3D09 /* 效果图2.gif */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -238,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C543FF581E5EEB7F00BC3D09 /* 效果图2.gif in Resources */,
 				C543FF321E5EAB1F00BC3D09 /* contacts.json in Resources */,
 				C543FF461E5EAC5900BC3D09 /* pulldownList@2x.png in Resources */,
 				C543FF471E5EAC5900BC3D09 /* pulldownList@3x.png in Resources */,
@@ -249,6 +256,7 @@
 				C543FF3E1E5EAC0F00BC3D09 /* group_manage@2x.png in Resources */,
 				C54A3F481E5D9B50008FF367 /* Main.storyboard in Resources */,
 				C543FF421E5EAC2700BC3D09 /* add@2x.png in Resources */,
+				C543FF571E5EEB7F00BC3D09 /* 效果图1.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
