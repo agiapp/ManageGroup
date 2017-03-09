@@ -10,10 +10,6 @@
 
 @class BRContactsModel;
 @interface BRContactsCell : UITableViewCell
-@property (nonatomic, strong) UIImageView *iconImageView;
-@property (nonatomic, strong) UILabel *nameLabel;
-@property (nonatomic, strong) UILabel *describeLabel;
-@property (nonatomic, strong) UILabel *activeTimeLabel;
 // 模型对象
 @property (nonatomic, strong) BRContactsModel *model;
 
