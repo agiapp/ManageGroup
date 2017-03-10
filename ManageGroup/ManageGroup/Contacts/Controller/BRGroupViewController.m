@@ -173,10 +173,11 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         BRGroupModel *dModel = _groupModelArr[indexPath.row];
         if (dModel.memberNum == 0) {
+            NSLog(@"删除分组！");
             //1. 更新数据源(数组): 根据indexPaht.row作为数组下标, 从数组中删除数据
-            [self.groupModelArr removeObjectAtIndex:indexPath.row];
+            //[self.groupModelArr removeObjectAtIndex:indexPath.row];
             //2. TableView中 删除一个cell (以动画的形式删除指定的cell)
-            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+            //[tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
             // 发送删除请求...
         } else {
             NSLog(@"组内有成员，不能删除！");
