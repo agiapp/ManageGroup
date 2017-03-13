@@ -9,7 +9,7 @@
 
 ![项目结构图](https://github.com/borenfocus/ManageGroup/blob/master/ManageGroup/a.png)
 
-# 关键代码
+# 代码说明
 
 - 指定哪些行的 cell 可以进行编辑 (UITableViewDataSource 协议方法) 
 
