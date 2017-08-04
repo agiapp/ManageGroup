@@ -18,6 +18,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    [self setupRootViewController];
+    [self.window makeKeyAndVisible];
+    
+    return YES;
+}
+
+- (void)setupRootViewController {
     BRContactsViewController *contactsVC = [[BRContactsViewController alloc]init];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:contactsVC];
     // 设置状态栏前景色为白色
@@ -29,9 +36,6 @@
     // 设置 title 颜色
     [nav.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     self.window.rootViewController = nav;
-    [self.window makeKeyAndVisible];
-    
-    return YES;
 }
 
 
