@@ -1,88 +1,85 @@
 {
-    "head": {
-        "code": "1000",
-        "ret_code": "0"
-    },
-    "body": {
-        "groups": [
-                   {
-                   "group_id": "35ea5621962baa0e2b3dca2d4",
-                   "group_name": "未分组",
-                   "group_type": "1",
-                   "member_num": "3",
-                   "contacts": [
-                                {
-                                "id": "5848ead4d9e8d7b31172a285",
-                                "head_img": "default.png",
-                                "name": "张三",
-                                "describe": "[WIFI在线] 欢迎给我留言",
-                                "active_time": "12:50"
-                                },
-                                {
-                                "id": "a243e23848ea43fddfs347b1",
-                                "head_img": "default.png",
-                                "name": "李四",
-                                "describe": "[手机在线] 更新了日志",
-                                "active_time": "08:20"
-                                },
-                                {
-                                "id": "fsdfre522a43fddfs337b1",
-                                "head_img": "default.png",
-                                "name": "王五",
-                                "describe": "[4G在线] 更新了说说",
-                                "active_time": "星期三"
-                                }
-                                ]
-                   },
-                   {
-                   "group_id": "80adasdas092dee232b74ca232",
-                   "group_name": "高中同学",
-                   "group_type": "2",
-                   "member_num": "2",
-                   "contacts": [
-                                {
-                                "id": "e323e65842ea43fd3sde367e4",
-                                "head_img": "default.png",
-                                "name": "小明",
-                                "describe": "[电脑在线] 好好学习，天天向上",
-                                "active_time": "昨天"
-                                },
-                                {
-                                "id": "dwedwe3242cdw43fd3s3227e4",
-                                "head_img": "default.png",
-                                "name": "张小龙",
-                                "describe": "[离线请留言] 哥是最牛逼的产品经理",
-                                "active_time": "2017/2/22"
-                                }
-                                ]
-                   },
-                   {
-                   "group_id": "dwe2357ec923e0e2b23a47",
-                   "group_name": "大学同学",
-                   "group_type": "2",
-                   "member_num": "1",
-                   "contacts": [
-                                {
-                                "id": "2dd4ddf65842dsd323d44fscsa21",
-                                "head_img": "default.png",
-                                "name": "乔布斯",
-                                "describe": "[离线] 把产品做到极致",
-                                "active_time": "2017/2/22"
-                                }
-                                ]
-                   },
-                   {
-                   "group_id": "58ae5800963bee0e2b74ca48",
-                   "group_name": "同事",
-                   "group_type": "2",
-                   "member_num": "0"
-                   },
-                   {
-                   "group_id": "fdsds3233463bee0e2eeweffw",
-                   "group_name": "黑名单",
-                   "group_type": "2",
-                   "member_num": "0"
-                   }
-                   ]
-    }
+    "code": "1000",
+    "ret_code": "0",
+    "ret_msg": "操作成功",
+    "groups": [
+               {
+               "group_id": "35ea5621962baa0e2b3dca2d4",
+               "group_name": "未分组",
+               "group_type": "1",
+               "member_num": "3",
+               "contacts": [
+                            {
+                            "id": "5848ead4d9e8d7b31172a285",
+                            "head_img": "default.png",
+                            "name": "张三",
+                            "description": "[WIFI在线] 欢迎给我留言",
+                            "active_time": "12:50"
+                            },
+                            {
+                            "id": "a243e23848ea43fddfs347b1",
+                            "head_img": "default.png",
+                            "name": "李四",
+                            "description": "[手机在线] 更新了日志",
+                            "active_time": "08:20"
+                            },
+                            {
+                            "id": "fsdfre522a43fddfs337b1",
+                            "head_img": "default.png",
+                            "name": "王五",
+                            "description": "[4G在线] 更新了说说",
+                            "active_time": "星期三"
+                            }
+                            ]
+               },
+               {
+               "group_id": "80adasdas092dee232b74ca232",
+               "group_name": "高中同学",
+               "group_type": "2",
+               "member_num": "2",
+               "contacts": [
+                            {
+                            "id": "e323e65842ea43fd3sde367e4",
+                            "head_img": "default.png",
+                            "name": "小明",
+                            "description": "[电脑在线] 好好学习，天天向上",
+                            "active_time": "昨天"
+                            },
+                            {
+                            "id": "dwedwe3242cdw43fd3s3227e4",
+                            "head_img": "default.png",
+                            "name": "张小龙",
+                            "description": "[离线请留言] 哥是最牛逼的产品经理",
+                            "active_time": "2017/2/22"
+                            }
+                            ]
+               },
+               {
+               "group_id": "dwe2357ec923e0e2b23a47",
+               "group_name": "大学同学",
+               "group_type": "2",
+               "member_num": "1",
+               "contacts": [
+                            {
+                            "id": "2dd4ddf65842dsd323d44fscsa21",
+                            "head_img": "default.png",
+                            "name": "乔布斯",
+                            "description": "[离线] 把产品做到极致",
+                            "active_time": "2017/2/22"
+                            }
+                            ]
+               },
+               {
+               "group_id": "58ae5800963bee0e2b74ca48",
+               "group_name": "同事",
+               "group_type": "2",
+               "member_num": "0"
+               },
+               {
+               "group_id": "fdsds3233463bee0e2eeweffw",
+               "group_name": "黑名单",
+               "group_type": "2",
+               "member_num": "0"
+               }
+               ]
 }

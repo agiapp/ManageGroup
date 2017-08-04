@@ -10,7 +10,7 @@
 
 @class BRContactsModel;
 @interface BRContactsCell : UITableViewCell
-// 模型对象
+/** 组员模型对象 */
 @property (nonatomic, strong) BRContactsModel *model;
 
 @end

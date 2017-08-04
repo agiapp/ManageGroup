@@ -9,6 +9,9 @@
 #import "BRContactsCell.h"
 #import "BRContactsModel.h"
 
+// 等比例适配系数
+#define kScaleFit (SCREEN_WIDTH / 375.0f)
+
 @interface BRContactsCell ()
 @property (nonatomic, strong) UIImageView *iconImageView;
 @property (nonatomic, strong) UILabel *nameLabel;
@@ -18,6 +21,7 @@
 @end
 
 @implementation BRContactsCell
+#pragma mark - 初始化
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if ([super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self.contentView addSubview:self.iconImageView];
@@ -28,12 +32,22 @@
     return self;
 }
 
+#pragma mark - setter
 - (void)setModel:(BRContactsModel *)model {
     _model = model;
     _iconImageView.image = [UIImage imageNamed:@"default.jpg"];
     _nameLabel.text = model.name;
-    _describeLabel.text = model.describe;
+    _describeLabel.text = model.desc;
     _activeTimeLabel.text = model.activeTime;
+}
+
+#pragma mark - 设置子视图的frame
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    self.iconImageView.frame = CGRectMake(10, 6 * kScaleFit, 48 * kScaleFit, 48 * kScaleFit);
+    self.nameLabel.frame = CGRectMake(10 + 56 * kScaleFit, 10 * kScaleFit, 150 * kScaleFit, 20 * kScaleFit);
+    self.describeLabel.frame = CGRectMake(10 + 56 * kScaleFit, 35 * kScaleFit, 210 * kScaleFit, 15 * kScaleFit);
+    self.activeTimeLabel.frame = CGRectMake(SCREEN_WIDTH - 100 * kScaleFit - 10, 10 * kScaleFit, 100 * kScaleFit, 20 * kScaleFit);
 }
 
 #pragma mark - 懒加载
@@ -72,16 +86,6 @@
         _activeTimeLabel.font = [UIFont systemFontOfSize:12];
     }
     return _activeTimeLabel;
-}
-
-#pragma mark - 设置子视图的frame
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    self.iconImageView.frame = CGRectMake(10, 6 / 375.0 * SCREEN_WIDTH, 48 / 375.0 * SCREEN_WIDTH, 48 / 375.0 * SCREEN_WIDTH);
-    self.nameLabel.frame = CGRectMake(10 + 56 / 375.0 * SCREEN_WIDTH, 10 / 375.0 * SCREEN_WIDTH, 150 / 375.0 * SCREEN_WIDTH, 20 / 375.0 * SCREEN_WIDTH);
-    self.describeLabel.frame = CGRectMake(10 + 56 / 375.0 * SCREEN_WIDTH, 35 / 375.0 * SCREEN_WIDTH, 210 / 375.0 * SCREEN_WIDTH, 15 / 375.0 * SCREEN_WIDTH);
-    self.activeTimeLabel.frame = CGRectMake(SCREEN_WIDTH - 100 / 375.0 * SCREEN_WIDTH - 10, 10 / 375.0 * SCREEN_WIDTH, 100 / 375.0 * SCREEN_WIDTH, 20 / 375.0 * SCREEN_WIDTH);
-    
 }
 
 

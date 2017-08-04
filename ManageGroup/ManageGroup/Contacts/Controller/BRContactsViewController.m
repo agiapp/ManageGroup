@@ -12,19 +12,19 @@
 #import "BRGroupModel.h"
 #import "BRGroupViewController.h"
 #import "BRSearchBarView.h"
+#import <MJExtension.h>
 
 @interface BRContactsViewController ()<UITableViewDataSource, UITableViewDelegate>
 {
     NSIndexPath *_indexPath; // 保存当前选中的单元格
-    NSMutableArray *switchArr; // 保存旋转状态(展开/折叠)
 }
-
-@property (nonatomic,strong) BRSearchBarView *searchBarView; //搜索框视图
+/** 搜索框视图 */
+@property (nonatomic,strong) BRSearchBarView *searchBarView;
 @property (nonatomic, strong) UITableView *tableView;
 /** 保存分组数据模型 */
 @property (nonatomic, strong) NSMutableArray *groupModelArr;
-/** 保存联系人数据模型 (是一个二维数组, 便于遍历分区和行信息) */
-@property (nonatomic, strong) NSMutableArray *contactsModelArr;
+/** 保存旋转状态(展开/折叠) */
+@property (nonatomic, strong) NSMutableArray *switchArr;
 
 @end
 
@@ -45,43 +45,30 @@
 }
 
 - (void)loadData {
-    // 读取本地JSON文件的内容
-    NSString *filePath = [[NSBundle mainBundle]pathForResource:@"contacts" ofType:@"json"];
-    NSData *data = [NSData dataWithContentsOfFile:filePath];
-    NSDictionary *jsonObj = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-    NSLog(@"数据内容：%@", jsonObj);
-    NSString *retCode = jsonObj[@"head"][@"ret_code"];
-    NSArray *groupsArr = jsonObj[@"body"][@"groups"];
-    if ([retCode isEqualToString:successFlag]) {
-        for (NSDictionary *groupDic in groupsArr) {
-            BRGroupModel *groupModel = [[BRGroupModel alloc]init];
-            groupModel.groupID = groupDic[@"group_id"];
-            groupModel.groupName = groupDic[@"group_name"];
-            groupModel.groupType = [groupDic[@"group_type"] integerValue];
-            groupModel.memberNum = [groupDic[@"member_num"] integerValue];
-            [self.groupModelArr addObject:groupModel];
-            // 获取分组项
-            NSArray *contactsArr = groupDic[@"contacts"];
-            NSMutableArray *tmpArr = [[NSMutableArray alloc]init];
-            for (NSDictionary *contactsDic in contactsArr) {
-                BRContactsModel *contactsModel = [[BRContactsModel alloc]init];
-                contactsModel.ID = contactsDic[@"id"];
-                contactsModel.headImg = contactsDic[@"head_img"];
-                contactsModel.name = contactsDic[@"name"];
-                contactsModel.describe = contactsDic[@"describe"];
-                contactsModel.activeTime = contactsDic[@"active_time"];
-                [tmpArr addObject:contactsModel];
+    self.groupModelArr = nil;
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        // 加载本地数据（实际开发中这里写网络请求，从服务端请求数据...）
+        NSString *filePath = [[NSBundle mainBundle]pathForResource:@"contacts" ofType:@"json"];
+        NSData *data = [NSData dataWithContentsOfFile:filePath];
+        NSDictionary *jsonObj = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        NSLog(@"数据内容：%@", jsonObj);
+        NSString *retCode = jsonObj[@"ret_code"];
+        if ([retCode isEqualToString:successFlag]) {
+            // 解析返回的结果：JSON转数据模型
+            NSMutableArray *groupModelArr = [BRGroupModel mj_objectArrayWithKeyValuesArray:jsonObj[@"groups"]];
+            self.groupModelArr = groupModelArr;
+            
+            for (NSInteger i = 0; i < self.groupModelArr.count; i++) {
+                // 加个判断，防止多次重复调用这个方法时，造成数据越界无限添加
+                if (self.switchArr.count < self.groupModelArr.count) {
+                    [self.switchArr addObject:@NO];
+                }
             }
-            [self.contactsModelArr addObject:tmpArr];
-            if (switchArr == nil) {
-                switchArr = [[NSMutableArray alloc]init];
-            }
-            [switchArr addObject:@NO];
+            // 回到主线程刷新表格
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadData];
+            });
         }
-    }
-    // 回到主线程更新界面
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.tableView reloadData];
     });
 }
 
@@ -92,6 +79,7 @@
     [btn addTarget:self action:@selector(clickToGroupManagement) forControlEvents:UIControlEventTouchUpInside];
     return btn;
 }
+
 - (void)clickToGroupManagement {
     BRGroupViewController *groupVC = [[BRGroupViewController alloc]init];
     groupVC.groupModelArr = self.groupModelArr; //传值
@@ -123,11 +111,12 @@
 
 #pragma mark- UITableViewDataSource, UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.contactsModelArr.count;
+    return self.groupModelArr.count;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if ([switchArr[section] boolValue] == YES) {
-        return [_contactsModelArr[section] count];
+    BRGroupModel *model = self.groupModelArr[section];
+    if ([self.switchArr[section] boolValue] == YES) {
+        return model.contacts.count;
     } else {
         return 0;
     }
@@ -137,7 +126,8 @@
     if (!cell) {
         cell = [[BRContactsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
-    cell.model = _contactsModelArr[indexPath.section][indexPath.row];
+    BRGroupModel *gModel = self.groupModelArr[indexPath.section];
+    cell.model = gModel.contacts[indexPath.row];
     // 添加单元格的长按手势
     UILongPressGestureRecognizer *longPressed = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPressToDo:)];
     longPressed.minimumPressDuration = 1;
@@ -150,7 +140,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     _indexPath = indexPath;
     // 获取当前患者对象,并传给详情页面
-    BRContactsModel *model = _contactsModelArr[indexPath.section][indexPath.row];
+    BRGroupModel *gModel = self.groupModelArr[indexPath.section];
+    BRContactsModel *model = gModel.contacts[indexPath.row];
     NSLog(@"点击了：%@", model.name);
 }
 /** 长按手势的执行方法 */
@@ -220,7 +211,7 @@
     view.tag = 1000 + section;
     
     CGFloat rota;
-    if ([switchArr[section] boolValue] == NO) {
+    if ([self.switchArr[section] boolValue] == NO) {
         rota = 0;
     } else {
         rota = M_PI_2; //π/2
@@ -231,11 +222,12 @@
 
 - (void)openClick:(UITapGestureRecognizer *)sender {
     NSInteger section = sender.view.tag - 1000;
-    if ([switchArr[section] boolValue] == NO) {
-        [switchArr replaceObjectAtIndex:section withObject:@YES];
+    if ([self.switchArr[section] boolValue] == NO) {
+        [self.switchArr replaceObjectAtIndex:section withObject:@YES];
     } else {
-        [switchArr replaceObjectAtIndex:section withObject:@NO];
+        [self.switchArr replaceObjectAtIndex:section withObject:@NO];
     }
+    // 刷新分区
     [_tableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
@@ -252,11 +244,11 @@
     return _groupModelArr;
 }
 
-- (NSMutableArray *)contactsModelArr {
-    if (!_contactsModelArr) {
-        _contactsModelArr = [[NSMutableArray alloc]init];
+- (NSMutableArray *)switchArr {
+    if (!_switchArr) {
+        _switchArr = [[NSMutableArray alloc]init];
     }
-    return _contactsModelArr;
+    return _switchArr;
 }
 
 @end

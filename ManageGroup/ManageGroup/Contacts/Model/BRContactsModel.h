@@ -16,7 +16,7 @@
 /** 姓名 */
 @property (nonatomic, copy) NSString *name;
 /** 描述 */
-@property (nonatomic, copy) NSString *describe;
+@property (nonatomic, copy) NSString *desc;
 /** 活动时间(表示与该联系人的最后交流时间) */
 @property (nonatomic, copy) NSString *activeTime;
 
