@@ -136,6 +136,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.view endEditing:YES];
     // 取消选中后的高亮状态(默认是：选中单元格后一直处于高亮状态，直到下次重新选择)
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     _indexPath = indexPath;
@@ -221,6 +222,7 @@
 }
 
 - (void)openClick:(UITapGestureRecognizer *)sender {
+    [self.view endEditing:YES];
     NSInteger section = sender.view.tag - 1000;
     if ([self.switchArr[section] boolValue] == NO) {
         [self.switchArr replaceObjectAtIndex:section withObject:@YES];
