@@ -5,6 +5,7 @@
 //  Created by 任波 on 17/2/23.
 //  Copyright © 2017年 renbo. All rights reserved.
 //
+//  最新代码下载地址：https://github.com/borenfocus/ManageGroup
 
 #import "BRGroupViewController.h"
 #import "BRGroupModel.h"

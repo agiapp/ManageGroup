@@ -5,6 +5,7 @@
 //  Created by 任波 on 17/2/23.
 //  Copyright © 2017年 renbo. All rights reserved.
 //
+//  最新代码下载地址：https://github.com/borenfocus/ManageGroup
 
 #import "BRContactsViewController.h"
 #import "BRContactsCell.h"
@@ -59,7 +60,7 @@
             self.groupModelArr = groupModelArr;
             
             for (NSInteger i = 0; i < self.groupModelArr.count; i++) {
-                // 加个判断，防止多次重复调用这个方法时，造成数据越界无限添加
+                // 加个判断，防止多次重复调用这个方法时，造成数据累加无限添加
                 if (self.switchArr.count < self.groupModelArr.count) {
                     [self.switchArr addObject:@NO];
                 }
