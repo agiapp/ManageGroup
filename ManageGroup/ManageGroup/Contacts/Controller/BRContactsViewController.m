@@ -230,8 +230,10 @@
     } else {
         [self.switchArr replaceObjectAtIndex:section withObject:@NO];
     }
-    // 刷新分区
-    [_tableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:UITableViewRowAnimationAutomatic];
+    if (section >= 0) {
+        // 刷新分区
+        [_tableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {

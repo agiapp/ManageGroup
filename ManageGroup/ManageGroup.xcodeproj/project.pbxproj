@@ -28,6 +28,8 @@
 		C54A3F481E5D9B50008FF367 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C54A3F461E5D9B50008FF367 /* Main.storyboard */; };
 		C54A3F4A1E5D9B50008FF367 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C54A3F491E5D9B50008FF367 /* Assets.xcassets */; };
 		C54A3F4D1E5D9B50008FF367 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C54A3F4B1E5D9B50008FF367 /* LaunchScreen.storyboard */; };
+		C5ACE5B01F4D23800069978B /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5ACE5AD1F4D23800069978B /* YYFPSLabel.m */; };
+		C5ACE5B11F4D23800069978B /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = C5ACE5AF1F4D23800069978B /* YYWeakProxy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,10 @@
 		C54A3F491E5D9B50008FF367 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C54A3F4C1E5D9B50008FF367 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C54A3F4E1E5D9B50008FF367 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5ACE5AC1F4D23800069978B /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
+		C5ACE5AD1F4D23800069978B /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
+		C5ACE5AE1F4D23800069978B /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
+		C5ACE5AF1F4D23800069978B /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
 		E1111FE3EFF3AAC4D62CB7E6 /* libPods-ManageGroup.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ManageGroup.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -172,6 +178,7 @@
 				C54A3F401E5D9B50008FF367 /* AppDelegate.h */,
 				C54A3F411E5D9B50008FF367 /* AppDelegate.m */,
 				C543FF221E5EAB1F00BC3D09 /* Contacts */,
+				C5ACE5AA1F4D23680069978B /* Vendor */,
 				C543FF3B1E5EABA400BC3D09 /* Resource */,
 				C54A3F461E5D9B50008FF367 /* Main.storyboard */,
 				C54A3F491E5D9B50008FF367 /* Assets.xcassets */,
@@ -189,6 +196,25 @@
 				C54A3F3E1E5D9B50008FF367 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C5ACE5AA1F4D23680069978B /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				C5ACE5AB1F4D23800069978B /* YYFPSLabel */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		C5ACE5AB1F4D23800069978B /* YYFPSLabel */ = {
+			isa = PBXGroup;
+			children = (
+				C5ACE5AC1F4D23800069978B /* YYFPSLabel.h */,
+				C5ACE5AD1F4D23800069978B /* YYFPSLabel.m */,
+				C5ACE5AE1F4D23800069978B /* YYWeakProxy.h */,
+				C5ACE5AF1F4D23800069978B /* YYWeakProxy.m */,
+			);
+			path = YYFPSLabel;
 			sourceTree = "<group>";
 		};
 		CF8C87018EA9F3B3C6B0AB7C /* Frameworks */ = {
@@ -331,10 +357,12 @@
 			files = (
 				C543FF301E5EAB1F00BC3D09 /* BRGroupViewController.m in Sources */,
 				C543FF541E5EE58900BC3D09 /* BRSearchBarView.m in Sources */,
+				C5ACE5B11F4D23800069978B /* YYWeakProxy.m in Sources */,
 				C543FF331E5EAB1F00BC3D09 /* BRContactsCell.m in Sources */,
 				C543FF4C1E5EBAD700BC3D09 /* BRGroupModel.m in Sources */,
 				C543FF311E5EAB1F00BC3D09 /* BRContactsModel.m in Sources */,
 				C54A3F421E5D9B50008FF367 /* AppDelegate.m in Sources */,
+				C5ACE5B01F4D23800069978B /* YYFPSLabel.m in Sources */,
 				C54A3F3F1E5D9B50008FF367 /* main.m in Sources */,
 				C543FF531E5EE58900BC3D09 /* BRSearchBar.m in Sources */,
 				C543FF2F1E5EAB1F00BC3D09 /* BRContactsViewController.m in Sources */,

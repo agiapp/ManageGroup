@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "BRContactsViewController.h"
+#import "YYFPSLabel.h"
 
 @interface AppDelegate ()
 
@@ -21,9 +22,13 @@
     [self setupRootViewController];
     [self.window makeKeyAndVisible];
     
+    // 添加 显示FPS（刷新帧率，画面每秒传输的帧数）
+    [self showFPSLabel];
+    
     return YES;
 }
 
+#pragma mark - 设置根视图控制器
 - (void)setupRootViewController {
     BRContactsViewController *contactsVC = [[BRContactsViewController alloc]init];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:contactsVC];
@@ -38,6 +43,11 @@
     self.window.rootViewController = nav;
 }
 
+#pragma mark - 添加 YYFPSLabel
+- (void)showFPSLabel {
+    YYFPSLabel *fpsLabel = [[YYFPSLabel alloc]initWithFrame:CGRectMake((SCREEN_WIDTH - 50) / 2, 100, 50, 20)];
+    [[UIApplication sharedApplication].keyWindow addSubview:fpsLabel];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
